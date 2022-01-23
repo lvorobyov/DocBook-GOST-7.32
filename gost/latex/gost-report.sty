@@ -1,0 +1,69 @@
+%%
+%% This style is derivated from the docbook one
+%% Copyright (c) 2022, Lev O. Vorobyov
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{gost-report}[2022/01/22 Institutional report]
+
+%% Just use the original package and pass the options
+\RequirePackageWithOptions{dbsimple}
+
+% Красная строка
+\usepackage{indentfirst}
+\usepackage{microtype}
+\linespread{1.3}
+
+% Формат заголовков
+\usepackage[explicit,md,tiny]{titlesec}
+\titleformat{\chapter}[block]{\fillast}{\thechapter}{1em plus .5em}{\MakeUppercase{#1}}
+\titlespacing{\chapter}{0pt}{-20pt}{*2.5}
+\titlespacing{\section}		 {\parindent}{*4}{*1.5}
+\titlespacing{\subsection}	 {\parindent}{*4}{*1.5}
+\titlespacing{\subsubsection}{\parindent}{*4}{*1.5}
+
+% Списки
+\makeatletter
+     \AddEnumerateCounter{\Asbuk}{\@Asbuk}{М)}
+     \AddEnumerateCounter{\asbuk}{\@asbuk}{м)}
+\makeatother
+\setlist{nolistsep, noitemsep, wide, leftmargin=\parindent}
+\setlist[1]{leftmargin=0pt}
+\renewcommand{\labelitemi}{---}
+\renewcommand{\labelitemii}{---}
+\renewcommand{\labelenumi}{\asbuk{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+% Приложения
+\providecommand*\appendixname{\cyr\CYRP\cyrr\cyri\cyrl\cyro\cyrzh\cyre\cyrn\cyri\cyre}
+\renewcommand\appendix{%
+  \setcounter{chapter}{0}
+  \setcounter{section}{0}
+  \renewcommand\thechapter{\Asbuk{chapter}}
+  \titleformat{\chapter}[block]{\fillast}{\appendixname~\thechapter\\}{0pt}{##1}
+}
+
+% Подписи рисунков, таблиц
+\usepackage{caption}
+\captionsetup{format=plain,justification=centering,labelsep=endash}
+\captionsetup[table]{justification=raggedleft,singlelinecheck=false}
+
+% Реферат
+\makeatletter
+\def\keywords#1{\gdef\@keywords{#1}}\keywords{}
+\renewenvironment{abstract}{
+  \chapter*{\abstractname}
+}{
+  \par\vfil\null%
+
+  \hyphenpenalty=10000
+
+  \sloppy
+  \MakeUppercase{\@keywords}%
+  \tolerance=200
+
+  \hyphenpenalty=50
+
+  \clearpage
+}
+\makeatother
+

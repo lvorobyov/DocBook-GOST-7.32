@@ -1,0 +1,32 @@
+%%
+%% This style is derivated from the docbook one
+%% Copyright (c) 2022, Lev O. Vorobyov
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{gost-article}[2022/01/22 Institutional article]
+
+%% Just use the original package and pass the options
+\RequirePackageWithOptions{dbsimple}
+
+% Красная строка
+\setlength{\parindent}{1.25cm}
+
+% Формат заголовков
+\usepackage[indentafter,bf,tiny]{titlesec}
+\titlespacing{\section}		 {0pt}{*4}{*1.5}
+\titlespacing{\subsection}	 {0pt}{*4}{*1.5}
+\titlespacing{\subsubsection}{0pt}{*4}{*1.5}
+
+% Списки
+\setlist{nolistsep, noitemsep, wide, leftmargin=\parindent}
+\setlist[1]{leftmargin=0pt}
+\renewcommand{\labelitemi}{---}
+\renewcommand{\labelitemii}{---}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\roman{enumii}.}
+
+% Подписи рисунков, таблиц
+\usepackage{caption}
+\captionsetup{format=plain,justification=centering,labelsep=endash}
+\captionsetup[table]{justification=raggedleft,singlelinecheck=false}
+

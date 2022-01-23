@@ -1,0 +1,64 @@
+= The dblatex's customization files for typesetting institutional papers in Russia
+
+:keywords: Russia, gost, dblatex, docbook, LaTeX, customization
+
+[abstract]
+This files is intended to customize dblatex to conversion DocBook to LaTeX with layout required for educational works (reports, articles, etc) in Russian institutes.
+
+== Motivation
+
+The standard algorithm of preparing educational documents in MS Word has some advantages:
+
+. It allows quickly create and print documents;
+. Changing in text immediately displays in GUI;
+. There is possibility to automatically generation of ToC, LoT, etc.
+
+But typesetting .docx documents has some disadvantages:
+
+. The difficulty of correcting incorrectly configured styles;
+. The need to customize layout for each new documents;
+. The captions for tables and figures needs to be added manually.
+
+Therefore most peoples choose LaTeX to prepare thesis, because it opens the following possibilities:
+
+. The document layout is separated from content, that allows reuse layout for more than one document;
+. The section titles is automatically indexed, and ToC is generated.
+. More easily typesetting mathematical equations.
+
+But typesetting documents in LaTeX has some disadvantages:
+
+. The bulky syntactic constructions for environments, in-text commands;
+. The compatibility issues with some abandoned packages;
+. The changing in document are not displayed immediately.
+
+There is other decision, that partially solves of thees disadvantages: DocBook.
+
+== Method
+
+First, the document typed in AsciiDoc is converted to DocBook with https://asciidoctor.org/[asciidoctor]. Then, docbook document converted to LaTeX file by http://dblatex.sourceforge.net/[dblatex] with `-T gost` option.
+
+== Installation
+
+Just copy all files into `~/.dblatex`
+
+== HOW to use
+
+To make .pdf from .adoc file:
+
+1. create links.bib file with setzer
+2. copy Makefile into you project directory
+3. use `make article.pdf` to create .pdf from .adoc
+
+To make .docx from .adoc file:
+
+1. create links.bib file with setzer
+2. copy either article_styles.docs or report_styles.docs into you project directory;
+3. copy Makefile into you project directory
+4. use `make article.docx` to create .docx from .adoc
+
+== License
+
+Copyright (c) 2022, Lev O. Vorobyov.
+
+This files provided as-is, without any warranty of reliability. You may copy, modify and redistribute this files without any restrictions but with one condition: the above copyright notice will be saved.
+
