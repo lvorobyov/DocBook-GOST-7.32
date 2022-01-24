@@ -1,4 +1,4 @@
-= The dblatex's customization files for typesetting institutional papers in Russia
+= Dblatex's customization files for typesetting institutional papers in Russia
 
 :keywords: Russia, gost, dblatex, docbook, LaTeX, customization
 
@@ -13,25 +13,25 @@ The standard algorithm of preparing educational documents in MS Word has some ad
 . Changing in text immediately displays in GUI;
 . There is possibility to automatically generation of ToC, LoT, etc.
 
-But typesetting .docx documents has some disadvantages:
+But typesetting documents in .docx format has some disadvantages:
 
 . The difficulty of correcting incorrectly configured styles;
 . The need to customize layout for each new documents;
-. The captions for tables and figures needs to be added manually.
+. Captions for tables and figures needs to be added manually.
 
 Therefore most peoples choose LaTeX to prepare thesis, because it opens the following possibilities:
 
 . The document layout is separated from content, that allows reuse layout for more than one document;
-. The section titles is automatically indexed, and ToC is generated.
+. Sections headers is automatically indexed, and ToC is generated.
 . More easily typesetting mathematical equations.
 
 But typesetting documents in LaTeX has some disadvantages:
 
-. The bulky syntactic constructions for environments, in-text commands;
-. The compatibility issues with some abandoned packages;
+. Bulky syntactic constructions for environments, in-text commands;
+. Compatibility issues with some abandoned packages;
 . The changing in document are not displayed immediately.
 
-There is other decision, that partially solves of thees disadvantages: DocBook.
+There is other decision, that partially solves of thees disadvantages: semantic markup.
 
 == Method
 
