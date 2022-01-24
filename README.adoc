@@ -43,18 +43,7 @@ Just copy all files into `~/.dblatex`
 
 == HOW to use
 
-To make .pdf from .adoc file:
-
-1. create links.bib file with setzer
-2. copy Makefile into you project directory
-3. use `make article.pdf` to create .pdf from .adoc
-
-To make .docx from .adoc file:
-
-1. create links.bib file with setzer
-2. copy either article_styles.docs or report_styles.docs into you project directory;
-3. copy Makefile into you project directory
-4. use `make article.docx` to create .docx from .adoc
+To make .pdf from .adoc file: `asciidoctor -b docbook5 -o - article.adoc | dblatex -T gost-article -o article.pdf -`.
 
 == License
 
