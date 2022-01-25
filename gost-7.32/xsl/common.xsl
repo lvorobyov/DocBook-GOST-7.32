@@ -9,7 +9,7 @@
 <!-- Pagination and General Styles --> 
 <xsl:param name="latex.encoding">utf8</xsl:param>
 <!-- <xsl:param name="latex.engine.options">-shell-escape</xsl:param>-->
-<!-- <xsl:param name="latex.class.article">scrartcl</xsl:param> -->
+<xsl:param name="latex.class.article">extarticle</xsl:param>
 <xsl:param name="latex.class.book">extreport</xsl:param>
 <xsl:param name="doc.alignment">justify</xsl:param>
 <xsl:param name="doc.collab.show">0</xsl:param>
