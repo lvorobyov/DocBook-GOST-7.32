@@ -8,6 +8,11 @@
 %% Just use the original package and pass the options
 \RequirePackageWithOptions{gost-7.32-2001}
 
+% Titles of ToC
+\dottedcontents{chapter}[1.1em]{}{1.1em}{1pc}
+\dottedcontents{section}[2.7em]{}{1.6em}{1pc}
+\dottedcontents{subsection}[5em]{}{2.3em}{1pc}
+
 % Numbered lists
 \renewcommand{\labelenumi}{\arabic{enumi}.}
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
