@@ -20,6 +20,7 @@
 % Списки
 \setlist{nolistsep, noitemsep, wide, leftmargin=\parindent}
 \setlist[1]{leftmargin=0pt}
+\setlist[2]{leftmargin=0pt}
 \renewcommand{\labelitemi}{---}
 \renewcommand{\labelitemii}{---}
 \renewcommand{\labelenumi}{\arabic{enumi}.}
@@ -28,5 +29,5 @@
 % Подписи рисунков, таблиц
 \usepackage{caption}
 \captionsetup{format=plain,justification=centering,labelsep=endash}
-\captionsetup[table]{justification=raggedleft,singlelinecheck=false}
+\captionsetup[table]{skip=0pt,justification=raggedleft,singlelinecheck=false}
 
