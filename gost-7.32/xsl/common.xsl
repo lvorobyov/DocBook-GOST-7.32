@@ -55,7 +55,7 @@
 <!-- <xsl:param name="literal.environment">minted</xsl:param>-->
 
 <!-- Automatic labeling -->
-<xsl:param name="biblioentry.numbered">0</xsl:param>
+<xsl:param name="bibliography.numbered">0</xsl:param>
 <xsl:param name="glossary.numbered">0</xsl:param>
 <xsl:param name="index.numbered">1</xsl:param>
 <xsl:param name="refentry.numbered">1</xsl:param>
